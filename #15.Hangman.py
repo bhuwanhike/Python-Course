@@ -1,11 +1,6 @@
 from getpass import getpass
 
-
-# print(True or False)
-
-
 def game_start():
-
   
     Word = getpass("\nEnter the word, don't worry your typed word will not be visible to the guesser!: ").upper()
     blanks_list = ['_']*len(Word)
@@ -29,7 +24,6 @@ def game_start():
             print("\nCongratulations! You won the game.")
             break
 
-
         Guessed_Letter = input("\nGuess the letter: ").upper()
 
         if (Guessed_Letter not in Word) or (Guessed_Letter in guessed_letters_list):
@@ -42,7 +36,6 @@ def game_start():
         
         for i,c in enumerate(Word):
 
-            
             if c == Guessed_Letter:
                 
                 blanks_list[i] = Guessed_Letter
